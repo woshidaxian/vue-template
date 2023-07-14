@@ -1,0 +1,44 @@
+// 背景图片
+@mixin bis($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+// flex布局
+@mixin flex($a: row, $b: center, $c: center) {
+  display: flex;
+  flex-direction: $a;
+  justify-content: $b;
+  align-items: $c;
+}
+
+// 宽高
+@mixin wh($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+// 字体样式
+@mixin fonts($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+// 超出隐藏...
+@mixin textEllipsis($lineNum) {
+  @if $lineNum ==1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lineNum; //需要显示的行数
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

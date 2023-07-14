@@ -1,0 +1,195 @@
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-box-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-left-enter-active {
+  animation: fromLeft 1s;
+}
+
+.slide-left-leave-active {
+  animation: fromLeft .5s reverse;
+}
+
+.slide-right-enter-active {
+  animation: fromRight 1s;
+}
+
+.slide-right-leave-active {
+  animation: fromRight .5s reverse;
+}
+
+.slide-bottom-enter-active {
+  animation: fromBottom 1s;
+}
+
+.slide-bottom-leave-active {
+  animation: fromBottom .5s reverse;
+}
+
+.slide-top-enter-active {
+  animation: fromTop 1s;
+}
+
+.slide-top-leave-active {
+  animation: fromTop .5s reverse;
+}
+
+.fade-big-enter-active {
+  animation: dialogShow .6s;
+}
+
+.fade-big-leave-active {
+  animation: dialogShow .5s reverse;
+}
+
+.fade-in-enter-active {
+  animation: fadeShow .5s;
+}
+
+.fade-in-leave-active {
+  animation: fadeShow .5s reverse;
+}
+
+.empty-data {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes dialogShow {
+  0% {
+    transform: scale(.3);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.mask {
+  pointer-events: all;
+
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// 拖尾动画
+.trailing {
+  &::before {
+    content: "";
+    display: block;
+    width: 0.2rem;
+    height: 100%;
+    border-radius: 25%;
+    background: linear-gradient(to right, #ffffff00 0%, #fff 100%);
+    position: absolute;
+    animation: moveFromLeftToRight 2.5s linear infinite;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 0%;
+  }
+}
+
+@keyframes moveFromLeftToRight {
+  0% {
+    left: -60%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    left: calc(100% - 0.2rem);
+  }
+}
