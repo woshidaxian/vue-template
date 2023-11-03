@@ -22,7 +22,7 @@ module.exports = {
   runtimeCompiler: false,
 
   // 你可以启用本选项，以避免构建后的代码中出现未转译的第三方依赖；boolean | Array<string | RegExp>
-  transpileDependencies: false,
+  // transpileDependencies: false,
 
   // 不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建
   productionSourceMap: false
