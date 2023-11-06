@@ -10,12 +10,21 @@
       <div></div>
       <div></div>
     </template>
+
+    <!-- v-for，支持template渲染一段包含多个元素的内容 -->
+    <div v-for="(item, index) in arr1" :key="index"></div>
+    <div v-for="(item, index) of arr1" :key="index"></div>
+    <!-- 支持遍历对象 -->
+    <div v-for="(value, name, index) in obj1" :key="index" ></div> 
   </div>
 </template>
 
 <script>
+// 混入
+import tableMixin from '../mixins/demo';
 export default {
   name: '',
+  mixins: [tableMixin],
   components: {},
   data () {
     return {
@@ -25,6 +34,8 @@ export default {
       flag2: true,
       class1: '',
       class2: '',
+      arr1: [],
+      obj1: {}
     }
   },
 
@@ -52,6 +63,11 @@ export default {
     val2: function(){
 
     }
+  },
+
+  // 过滤器
+  filters: {
+    
   }
 }
 
