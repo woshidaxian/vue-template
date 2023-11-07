@@ -11,7 +11,6 @@ Object.keys(Component).forEach(name=>{
   let key = name.replace(/(\w)/, (v) => v.toUpperCase())
   Vue.component(`h${key}`, Component[name])
 })
-
 // 组件注册2
 // const ctx = require.context('./components', false, /\.vue$/)
 // console.log(ctx.keys().map(ctx))
