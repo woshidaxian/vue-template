@@ -19,7 +19,7 @@ module.exports = {
   lintOnSave: 'default', 
 
   // 是否使用包含运行时编译器的 Vue 构建版本，配合修改main.js中的代码
-  runtimeCompiler: false,
+  runtimeCompiler: true,
 
   // 你可以启用本选项，以避免构建后的代码中出现未转译的第三方依赖；boolean | Array<string | RegExp>
   // transpileDependencies: false,

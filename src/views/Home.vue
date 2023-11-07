@@ -14,8 +14,22 @@ export default {
     }
   },
 
-  mounted() {
-    
+  beforeCreate() {},
+  created() {},
+  beforeMount() {},
+  mounted() {},
+  beforeUpdate() {},
+  updated() {},
+  beforeDestroy() {},
+  destroyed() {},
+
+  // keep-live
+  activated() {},
+  deactivated() {},
+
+  // 捕获错误
+  errorCaptured: (err, vm, info) => {
+    console.log(err, vm, info)
   },
 
   methods: {
