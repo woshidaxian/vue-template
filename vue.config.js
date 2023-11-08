@@ -48,14 +48,16 @@ module.exports = {
 
   // 配置代理服务器
   // devServer: ''
-  devServe: {
-    '/api': {
-      target: '<url>',
-      ws: true,
-      changeOrigin: true,
-    },
-    '/otherApi': {
-      target: '<otherApi>'
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:9999',
+        ws: true,
+        changeOrigin: true,
+      },
+      '/otherApi': {
+        target: 'http://localhost:9999'
+      }
     }
   }
 }
